@@ -1,0 +1,33 @@
+Q2.What are the features of Spring Framework?
+
+
+
+ANSWER:
+
+
+
+
+
+The Spring Framework offers a wide range of features that facilitate the development of robust and scalable Java applications. Here are some key features of the Spring Framework:
+
+1. **Inversion of Control (IoC) Container**: The core feature of Spring is the IoC container, also known as the Spring container. It manages the lifecycle of application objects and injects dependencies into them, reducing the coupling between components.
+
+2. **Dependency Injection (DI)**: Spring supports DI, which allows objects to be loosely coupled and promotes modular and testable code. Dependencies can be injected into objects through constructor injection, setter injection, or method injection.
+
+3. **Aspect-Oriented Programming (AOP)**: Spring provides AOP support to address cross-cutting concerns, such as logging, caching, and transaction management. AOP allows developers to separate these concerns from the main business logic, resulting in cleaner and more maintainable code.
+
+4. **Spring MVC**: The Spring MVC framework provides a powerful model-view-controller (MVC) architecture for building web applications. It offers features like request handling, data binding, validation, and view resolution, allowing developers to create flexible and scalable web applications.
+
+5. **Data Access and ORM Support**: Spring offers seamless integration with popular data access technologies, including JDBC, JPA, Hibernate, and MyBatis. It provides templates, utilities, and abstractions to simplify database operations and supports declarative transaction management.
+
+6. **Spring Boot**: Spring Boot is an opinionated framework that simplifies the setup and configuration of Spring applications. It provides auto-configuration, embedded servers, and production-ready features, allowing developers to quickly build stand-alone Spring applications.
+
+7. **Spring Security**: Spring Security is a robust security framework that provides authentication, authorization, and other security features for Java applications. It allows developers to secure their applications at various levels, including URL-based security, method-level security, and more.
+
+8. **Spring Integration**: Spring Integration enables the integration of disparate systems and applications. It provides a messaging framework with support for enterprise integration patterns (EIP) and facilitates the development of scalable and flexible integration solutions.
+
+9. **Testing Support**: Spring offers comprehensive testing support, including unit testing and integration testing. It provides utilities and annotations for writing tests, supports mock objects, and allows easy setup and teardown of the test environment.
+
+10. **Caching**: Spring provides caching support, allowing developers to cache frequently accessed data and improve application performance. It integrates with popular caching libraries, such as Ehcache, Hazelcast, and Redis.
+
+These are just a few of the many features offered by the Spring Framework. Spring's modular design and extensive ecosystem make it a versatile framework for developing a wide range of enterprise applications.

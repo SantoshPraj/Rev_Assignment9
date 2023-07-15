@@ -1,0 +1,30 @@
+Q5.What do you understand by Dependency Injection?
+
+
+
+ANSWER:
+
+
+Dependency Injection (DI) is a design pattern and a core concept in the Spring Framework. It is a process of providing the dependencies of an object (referred to as the dependent or client) from an external source rather than having the object create or manage its dependencies.
+
+In the traditional approach, objects are responsible for creating and managing their dependencies. However, with Dependency Injection, the responsibility of managing dependencies is shifted to an external entity, typically a container or framework. The dependencies are "injected" into the dependent object by the container, hence the term "Dependency Injection."
+
+There are three common types of Dependency Injection:
+
+1. **Constructor Injection**: Dependencies are provided to the dependent object through its constructor. The dependencies are passed as parameters to the constructor when creating the object. Constructor Injection promotes immutability and ensures that all required dependencies are provided at the time of object creation.
+
+2. **Setter Injection**: Dependencies are set or "injected" into the dependent object through setter methods. The dependent object provides setter methods for each dependency, and the container sets the dependencies by invoking these setter methods after creating the object. Setter Injection allows flexibility as dependencies can be changed or reconfigured at runtime.
+
+3. **Method Injection**: Dependencies are injected into the dependent object through special methods. The dependent object defines specific methods that accept the required dependencies as parameters. The container invokes these methods and provides the dependencies when needed. Method Injection is less commonly used compared to Constructor and Setter Injection.
+
+Dependency Injection offers several benefits:
+
+- **Loose Coupling**: Dependency Injection promotes loose coupling between objects. The dependent object doesn't need to know how to create or obtain its dependencies. It relies on an external entity to provide the required dependencies, enabling easier modification, testing, and maintenance of the codebase.
+
+- **Modularity and Reusability**: Dependencies can be easily replaced or substituted with alternative implementations without changing the dependent object's code. This promotes modularity and allows for flexible configuration and reuse of components.
+
+- **Testability**: Dependency Injection simplifies unit testing by allowing dependencies to be easily mocked or stubbed. It enables the testing of individual components in isolation, leading to more effective and efficient testing.
+
+- **Separation of Concerns**: Dependency Injection helps in separating the creation of objects and the wiring of dependencies from the actual business logic. This promotes a clearer separation of concerns, making the codebase more modular, maintainable, and easier to understand.
+
+The Spring Framework utilizes Dependency Injection as a key mechanism for managing object dependencies and achieving loose coupling between components. It provides a powerful IoC container that handles the injection of dependencies, allowing developers to focus on writing business logic and promoting flexible and modular application development.

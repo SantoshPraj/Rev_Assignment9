@@ -1,0 +1,20 @@
+Q4.What do you mean by IoC Container?
+
+
+
+ANSWER:
+
+
+Inversion of Control (IoC) Container, also known as the Spring container, is a core concept of the Spring Framework. It is responsible for managing the lifecycle of application objects (beans) and their dependencies. The IoC container creates, configures, and assembles the objects, and also manages their destruction when they are no longer needed.
+
+The term "Inversion of Control" refers to the shift of control over the creation and management of objects from the application code to the container. In a traditional programming model, objects are responsible for creating and managing their dependencies. However, with the IoC container, the responsibility of object creation and dependency management is inverted or "inverted" to the container.
+
+The IoC container achieves this inversion of control through the following key mechanisms:
+
+1. **Dependency Injection (DI)**: The IoC container injects the required dependencies into objects at runtime. Instead of objects creating their dependencies, the container provides the dependencies to the objects. This allows objects to be loosely coupled and makes it easier to manage dependencies, promote modularity, and facilitate testing.
+
+2. **Bean Configuration**: The IoC container uses configuration metadata (such as XML, Java annotations, or Java code) to define and configure the beans in the application. This metadata provides instructions to the container on how to create, configure, and wire the beans together. It specifies the bean's class, dependencies, and other properties.
+
+3. **Bean Lifecycle Management**: The IoC container manages the lifecycle of beans, which includes creating, initializing, using, and destroying the beans. The container ensures that beans are created and configured appropriately, resolving dependencies, and allowing for cleanup when beans are no longer needed.
+
+By utilizing the IoC container, developers can focus on writing business logic without worrying about object creation, dependency management, and other infrastructure concerns. The container takes care of these responsibilities, providing a more modular, loosely coupled, and manageable application structure. It also enables easier testing and promotes the separation of concerns by allowing components to be easily swapped or configured differently without modifying the application code.

@@ -1,0 +1,25 @@
+Q9.What is Autowiring and name the different modes of it?
+
+
+
+ANSWER:
+
+
+
+Autowiring in Spring is a feature that allows the Spring IoC container to automatically inject dependencies into beans without explicitly configuring each dependency. Instead of manually wiring dependencies using setter methods or constructors, autowiring automatically resolves and injects the appropriate dependencies based on matching types.
+
+The different modes of autowiring in Spring are:
+
+1. **No**: This is the default mode of autowiring. No autowiring is performed, and dependencies must be explicitly configured using the `@Autowired`, `@Resource`, or `@Inject` annotations, or through XML configuration.
+
+2. **ByName**: In this mode, Spring autowires dependencies by matching the bean's property or constructor argument name with the bean names defined in the container. If a matching bean name is found, the dependency is injected.
+
+3. **ByType**: In this mode, Spring autowires dependencies by matching the bean's property or constructor argument type with the type of the beans defined in the container. If a single matching bean is found, the dependency is injected. If multiple beans of the same type are found, an exception is thrown.
+
+4. **Constructor**: This mode is similar to `ByType`, but it specifically autowires dependencies through constructors. Spring searches for beans with matching types and automatically injects them into the constructor arguments.
+
+5. **Autowired**: This is a more flexible mode of autowiring introduced in Spring 2.5. It allows autowiring by type with optional by-name matching. Spring attempts to autowire by type, and if multiple beans of the same type are found, it falls back to autowiring by name. The `@Autowired` annotation is typically used in conjunction with this mode.
+
+6. **Inject**: This mode is similar to `Autowired` and also introduced in Spring 2.5. It allows autowiring by type with optional by-name matching, using the `@Inject` annotation. It is an alternative to `@Autowired` and is part of the Java Dependency Injection specification (JSR-330).
+
+The choice of autowiring mode depends on the specific requirements of your application. `ByName` and `ByType` are the most commonly used modes, with `Autowired` and `Inject` providing additional flexibility and convenience. By leveraging autowiring, you can reduce the need for manual dependency configuration and simplify the wiring process in your Spring application.

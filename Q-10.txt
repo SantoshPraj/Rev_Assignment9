@@ -1,0 +1,33 @@
+Q10.Explain Bean life cycle in Spring Bean Factory Container.
+
+
+
+ANSWER:
+
+
+
+In the Spring Framework, the lifecycle of a bean managed by the BeanFactory container consists of several well-defined phases. These phases allow for initialization, configuration, and destruction of the bean. Here is an overview of the bean lifecycle in the Spring BeanFactory container:
+
+1. **Instantiation**: The BeanFactory container instantiates a bean by calling its constructor. This is the initial step in creating a bean instance.
+
+2. **Property Population**: After the bean is instantiated, the container sets the bean's properties and dependencies using either setter methods or direct field injection. This is known as property population or dependency injection.
+
+3. **BeanNameAware and BeanFactoryAware**: If the bean implements the `BeanNameAware` interface, the container sets the bean's name using the `setBeanName()` method. Similarly, if the bean implements the `BeanFactoryAware` interface, the container injects a reference to the BeanFactory using the `setBeanFactory()` method.
+
+4. **BeanPostProcessors**: The BeanFactory container applies any registered `BeanPostProcessor` implementations to the bean. These post-processors can modify or enhance the bean before and after its initialization.
+
+5. **InitializingBean and init-method**: If the bean implements the `InitializingBean` interface, the container calls its `afterPropertiesSet()` method to perform any initialization logic. Alternatively, if an init-method is specified in the bean's configuration, the container invokes that method.
+
+6. **Custom Initialization**: After the bean has been instantiated and its dependencies have been set, any custom initialization logic specified by the developer is executed. This can include additional initialization methods or custom logic within the bean's code.
+
+7. **BeanPostProcessors (again)**: After the custom initialization, the BeanFactory container again applies any registered `BeanPostProcessor` implementations to the bean. These post-processors can further modify or enhance the bean after its initialization.
+
+At this point, the bean is fully initialized and ready to be used within the application.
+
+8. **Bean Usage**: The bean is now available for use within the application. Other beans or components can reference and interact with it as needed.
+
+9. **DisposableBean and destroy-method**: If the bean implements the `DisposableBean` interface, the container calls its `destroy()` method to perform any necessary cleanup or resource release. Additionally, if a destroy-method is specified in the bean's configuration, the container invokes that method.
+
+10. **Custom Destruction**: After the container performs its own destruction operations, any custom destruction logic specified by the developer is executed. This can include additional destruction methods or custom logic within the bean's code.
+
+The lifecycle of a bean in the Spring BeanFactory container provides opportunities to customize and control various stages of the bean's creation, initialization, and destruction. By implementing specific interfaces or defining appropriate methods, developers can integrate their own logic and behavior into the bean lifecycle, ensuring proper initialization and cleanup of resources.

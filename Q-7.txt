@@ -1,0 +1,29 @@
+Q7.What are Spring Beans?
+
+
+
+
+ANSWER:
+
+
+
+
+In the Spring Framework, a Spring Bean is an object that is instantiated, assembled, and managed by the Spring IoC container. Beans are the fundamental building blocks of a Spring application and represent the various components or objects that make up the application.
+
+Spring Beans are created based on the configuration provided to the Spring IoC container, which can be XML-based, Java-based, or annotation-based. The container instantiates and manages these beans throughout their lifecycle, handling their dependencies, and providing them to other beans when required.
+
+Key characteristics and features of Spring Beans include:
+
+1. **Object Lifecycle Management**: The Spring IoC container manages the lifecycle of beans, including their creation, initialization, usage, and destruction. It ensures that beans are created and configured correctly, and provides hooks for custom initialization and destruction logic.
+
+2. **Dependency Injection (DI)**: Spring Beans rely on Dependency Injection for the management of their dependencies. The container injects the required dependencies into the beans, promoting loose coupling and modular design.
+
+3. **Scoping**: Spring Beans can have different scopes, such as Singleton, Prototype, Request, Session, etc. The scope determines the lifecycle and visibility of a bean. For example, a Singleton bean is instantiated once and shared across the application, while a Prototype bean is created each time it is requested.
+
+4. **Configuration Metadata**: Beans are defined and configured using configuration metadata, such as XML files, Java-based configuration classes, or annotations. The metadata specifies the bean's class, dependencies, properties, and other configurations.
+
+5. **AOP Proxies**: Spring Beans can be wrapped with proxies to enable Aspect-Oriented Programming (AOP) features. Proxies intercept method invocations and allow for cross-cutting concerns, such as logging, transaction management, and security, to be applied to the beans.
+
+6. **Post-Processing**: Spring provides various mechanisms for post-processing beans, such as BeanPostProcessor and BeanFactoryPostProcessor interfaces. These allow for custom modification or enhancement of beans during the initialization phase.
+
+Spring Beans form the backbone of a Spring application, representing the components that implement the application's functionality. They are managed by the Spring IoC container, which handles their creation, configuration, and dependency injection. By relying on Spring Beans, applications benefit from loose coupling, modularity, and easy configuration changes, promoting flexible and maintainable code.
